@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107" height="107" viewBox="0 0 107 107">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 50 50">
+      <image width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAv++fMIBAECBgz9+Pr3BQSYWXywAAANZJREFUSMfN1dsOgzAIgGFKSw+2Ot7/aZdli2GLdBCzw3/nxRelpBGOy7fAWqKAfA/XrcK76uj8XKxzEPkgmoiGfFhURWatoZHIalkhQSfBTzjNyRKJ6MWPCen02ENdDV9GzLiJZ2lQO+RYQFRZBLaCn9Ap0v0k+GcZRoK812wiiemLjUTLjQFtk9n9kmAT8o5Wkyid98j9WYtNNN7D5F5Jswmx9+EefbWJRYxePi+weBeC6W/EcIv2BZHdArpbNJ520c7X9+8LPO9nJPpJ848PW5iV4ERX4Bkw5mM68pQAAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <g id="Group_5" data-name="Group 5" transform="translate(-2357 -2443)">
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(2357 2443)" fill="none" stroke="#f6f0f4" stroke-width="3">
+      <circle cx="53.5" cy="53.5" r="53.5" stroke="none"/>
+      <circle cx="53.5" cy="53.5" r="52" fill="none"/>
+    </g>
+    <rect id="_2" data-name="2" width="50" height="50" rx="25" transform="translate(2385 2472)" fill="url(#pattern)"/>
+  </g>
+</svg>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Company</title>
+    <style>
+        
+    #enviomailok{
+        display: none;
+    }
+
+    .mje-success p{
+        text-align: center;
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+    }
+    </style>
+    <link  rel="icon" href="./assets/img/favicon.ico" type="image/png" />
+</head>
+<body>
+    <div class="bcg-mobile" id="BcgMobile"></div>
+    <!--Navbar Scroll-->
+    <nav class="NavBar NavBarScroll" id="">
+
+        <div class="d-flex flex-nav-scroll">
+            <a class="navbar-brand" href="./index"><img class="solventa solventa-bar" src="assets/img/solventa-violeta.svg" alt="solventa" ></a>
+                    
+            <!-- Menu Content -->
+            <div class="menu menu-list" id="navbarSupportedContent22">
+            
+                <ul class="d-flex">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="./index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./our-company">Our Company</a>
+                    </li>
+                    <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                    </li> -->
+                    <!-- <button class="btn-border-purple">My Account </button> -->
+                    <button class="btn-green btn-green-top btn-apply" id="apply1">Apply Now!</button>
+                </ul>
+            
+            </div>
+            <!-- End Menu content -->
+            
+        </div>
+
+    </nav>
+    <section class="nav-header">
+
+        <div class="container">
+            <a class="navbar-mobile" href="./index"><img class="solventa solventa-mob" src="assets/img/solventa-violeta.svg" alt="solventa" ></a>
+            <div class="top-bar-contact">
+                <div class="top-bar contact-bar" id="top-bar">
+                    <div class="numbers contact-home">
+                        <!-- <div class="d-flex box-contact">
+                            <img class="phone-icon" src="assets/img/phone.svg" alt="icono telefono">
+                            <a class="phone-number" >(305) 614 0965</a>
+                        </div>     -->
+                        <a href="mailto:hello@solventa.com" class="mail">hello@solventa.com</a>
+                    </div>
+                </div>
+            </div>
+           <!--Navbar-->
+           <nav class="NavBar" id="NavBar">
+                <div class="d-flex">
+                    <a class="navbar-brand" href="./index"><img class="solventa solventa-bar" src="assets/img/solventa-violeta.svg" alt="solventa" ></a>
+                            
+                    <!-- Menu Content -->
+                    <div class="menu menu-list" id="navbarSupportedContent22">
+                    
+                        <ul class="d-flex">
+                        <li class="nav-item active">
+                                <a class="nav-link" href="./index">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Our Company</a>
+                            </li>
+                            <!-- <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#">FAQs</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                            </li> -->
+                            <!-- <button class="btn-border-purple">My Account </button> -->
+                            <button class="btn-border-purple btn-apply" id="apply2">Apply now!</button>
+                        </ul>
+                    
+                    </div>
+                    <!-- Menu content -->
+                    
+                    <!-- Menu button -->
+                    <button class="navbar-toggler btn-menu" type="button" id="BtnMenu" >
+                    <div class="Menu-Icon" id="AnimatedIcon">
+                        <div class="Line1"></div>
+                        <div class="Line2"></div>
+                        <div class="Line3"></div>
+                    </div>
+                    </button>
+                </div>
+           </nav>
+            <!--/.Navbar-->
+        </div>
+   
+    </section>
+   
+    <section id="company" class="pt-0">
+        <div class="container">
+            <div class="row row-home d-flex">
+                <div class="col-12 col-sm-12 col-md-6">
+                    <div style="width: 72%;">
+                        <h1 class="h1 title-internal-section-h1"> <span class="h2-purple-bold">We offer online financial services</span> to be accessible to everyone</h1>
+                        <div class="mt-5">
+                            <a href="#aboutUs" class="btnAbout mt-5">Abous Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-none d-lg-flex col-md-6 image-company">
+                    <img class="image-company-01" src="assets/img/company.png" alt="company">
+                </div>                
+            </div>
+        </div>
+        <div class="modal-container" id="ModalContainer">
+            <div class="modal-box" id="modalbox">
+      
+                 <img class="close-icon" src="assets/img/close.svg" id="cerrarmodal" alt="cerrar icono">
+                 <form action="assets/php/contact_mail.php" method="POST">
+                     
+                      <div class="input-box anim-txt InputAnimacion1" >
+                          <input id="name" class="input" type="text" placeholder="Name" name="name">
+                          <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
+                          <!-- <label>Name</label>                                     -->
+                      </div> 
+                      <div class="input-box anim-txt InputAnimacion1" >
+                          <input class="input" type="text" placeholder="Phone Number" name="subject" id="subject">
+                          <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
+                          <!-- <label>Name</label>                                     -->
+                      </div> 
+                      <div class="input-box anim-txt InputAnimacion1" >
+                          <input id="email" class="input" type="email" placeholder="E-mail" name="email" >
+                          <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
+                          <!-- <label>Name</label>                                     -->
+                      </div> 
+      
+                      <button class="green-btn" type="submit">Send</button>
+                 </form>
+            </div>
+      
+            <div class="modal-box mje-success" id="enviomailok">
+      
+              <img class="close-icon" src="assets/img/close.svg" id="cerrarmodal2" alt="cerrar icono">
+              <p>Thank you for contacting us. Your message has been sent. </p>
+               
+           </div>
+      
+         </div>
+    </section>
+
+    <section id="aboutUs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 d-flex justify-content-center">
+                    <img src="assets/img/aboutus.png" alt="About Us" style="width: 100%;">
+                </div>
+                <div class="col-12 col-md-7 aboutUs d-flex flex-column justify-content-center">
+                    <h4 class="text-left title-internal-section">About Us</h4>
+                    <p class="text-1" >Already a leader in the continent’s southern cone segment, with more than 20 years of traditional financial experience, Solventa has migrated to the Fintech industry in Argentina, Colombia, Perú and the United States.</p>
+                    <p>We help and encourage people to face unexpected expenses without fear, through immediate financing and a simple process.</p>
+                    <p>Our main goal is to offer better alternatives to people who are joining the growing Fintech ecosystem, providing greater possibilities to finance unexpected expenses.</p>
+                    <p class="bold">When there are economic emergencies to solve, Solventa, with few requirements, is the best option.</p>
+                    <!-- <p>We stay close to our clients. We have a customer service team, consultants andtrained analysts who accompany and guide our clients at each stage of the request.</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hotItWorks">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+                    <img src="assets/img/process.svg" alt="">
+                </div>
+                <div class="col-12 col-md-9 d-flex flex-column justify-content-center">
+                    <h4 class="mt-5 mt-md-2 title-internal-section-w">How it works</h4>
+                    <p class="bold white">Our credit analysis technology allows us to evaluate in detail the applicant's profile in order to provide them a personalized loan amount according to their credit history.</p>
+                    <p class="white">We focus our efforts so that everyone can get Loans regardless they have had a credit life or not, helping people to face unforeseen situations.</p>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex px-0 py-2 align-items-center">
+                                <img src="assets/img/one.svg" alt="1" class="mx-1 pr-3">
+                                <p class="works">Loan’s amount and installment selection</p>
+                            </div>
+                            <div class="d-flex px-0 py-2 align-items-center">
+                                <img src="assets/img/two.svg" alt="2" class="mx-1 pr-3">
+                                <p class="works">User account registration</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 pr-0">
+                            <div class="d-flex px-0 py-2 align-items-center">
+                                <img src="assets/img/three.svg" alt="3" class="mx-1 pr-3">
+                                <p class="works">Provide information and identity validation.</p>
+                            </div>
+                            <div class="d-flex px-0 py-2 align-items-center">
+                                <img src="assets/img/four.svg" alt="4" class="mx-1 pr-3">
+                                <p class="works">Loan approval and disbursement.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <h5 class="mt-3 mt-md-5">Solventa is easy</h5> -->
+                    <!-- <ul>
+                        <li>Loan’s amount and installment selection.</li>
+                        <li>User account registration.</li>
+                        <li>Provide information and identity validation.</li>
+                        <li>Loan approval and disbursement.</li>
+                        <li>100% online application and approval. No formalities, no paperwork, no lines.</li>
+                        <li>24/7 applications. No matter where you are.</li>
+                        <li>Money withdrawal from any ATM.</li>
+                        <li>Multiple Payment methods.</li>
+                    </ul> -->
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="wekeepitsimple">
+        <div class="container">
+            <h4 class="mb-3 mb-md-4 text-center title-internal-section">We keep it Simple</h4>
+            <div class="row px-0 pt-5">
+                <div class="col-12 col-md-6">
+                    <div class="m-2 card">
+                        <img src="assets/img/laptop.svg" alt="laptop" class="mb-4">
+                        <p style="margin: 0;">100% online application and approval.</p>
+                        <p> No formalities, no paperwork, no lines.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="m-2 card">
+                        <img src="assets/img/24h.svg" alt="" class="mb-4">
+                        <p style="margin: 0;">24/7 applications. </p>
+                        <p>No matter where you are.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="m-2 card">
+                        <img src="assets/img/atm.svg" alt="" class="mb-4">
+                        <p>Money withdrawal from any ATM.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="m-2 card">
+                        <img src="assets/img/wallet-1.svg" alt="" class="mb-4">
+                        <p>Multiple Payment methods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section  id="ourLeadership" >
+        <div class="container">
+            <div class="row my-4">
+                <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+                    <img src="assets/img/leadership-violet.svg" alt="leadership">
+                </div>
+                <div class="col-12 col-md-9 d-flex flex-column justify-content-center">
+                    <h4 class="mt-5 mt-md-2 title-internal-section">Our Leadership</h4>
+                    <p class="bold mb-0" style="color: #6B2378;">Our leader’s main goal is to provide accessible financial services to everyone, on a responsible and innovative way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5 pb-5">
+        <div class="container">
+            <div>
+                <div class="col-12">
+                    <h4 class="mt-3 mt-md-5 text-center title-internal-section">Our Leaders</h4>
+                    
+                </div>
+                <div class="col-12 pt-4">
+                    <div class="row">
+                        <div class="col-12 col-md-4 px-5">
+                            <img src="assets/img/hernan.png" alt="hernan" class="d-flex" style="margin: 0 auto;">
+                            <h5 class="mt-3 mt-md-5 text-center leadername">Hernan Arcioni</h5>
+                            <h5 class="bajada text-center">CEO</h5>
+                            <p class="text-center text-1">Hernan has more than 21 years of financial market experience, specializing in SME factoring and personal loans. Founder of Credibel and Money Market stock company. Postgraduate in Finance at UCA and DPME at IAE.</p>
+                        </div>
+                        <div class="col-12 col-md-4 px-5">
+                            <img src="assets/img/cecilia.png" alt="cecilia" class="d-flex" style="margin: 0 auto;">
+                            <h5 class="mt-3 mt-md-5 text-center leadername">Cecilia Mujica</h5>
+                            <h5 class="bajada text-center">CEO</h5>
+                            <p class="text-center text-1">Cecilia is a Public Accountant graduated from UB, she has a Master in Audit andManagement Control in the same house of studies and more than 30 years of experience as Advisor, Accountant and Controller. She has been teacher at the UB for 25 years, as well as seven years working in the financial market.</p>
+                        </div>
+                        <div class="col-12 col-md-4 px-5">
+                            <img src="assets/img/hector.png" alt="hector" class="d-flex" style="margin: 0 auto;">
+                            <h5 class="mt-3 mt-md-5 text-center leadername">Hector Lema</h5>
+                            <h5 class="bajada text-center">PMO</h5>
+                            <p class="text-center text-1">Hector has more than 6 years of financial system experience, as actuary of credit analysis models. University Superior Technician in Systems Analysis. He was the CEO at Sintegesp (Integrated Public Management System) in Venezuela. He has performed Annual Operating Plans and Public Budget generation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="d-flex col-12 px-0" style="width:90%; margin:0 auto;justify-content: space-between;">
+            <div class="row mx-0">
+                <div class="col-12 col-md-2 px-0 footer-box footer-box-one">
+                    <img class="solventa" src="assets/img/solventa-white.svg" alt="solventa imagen">
+                    <p class="p-footer" style="margin-top: 1em">We take care of your information. Ask for your loan in our safe site. We use SSL protection and strict levels of security to protect your information.<br></p>
+                    <p style="font-size: 0.9em"></p>
+                </div>
+                <div class="col-12 col-md-7 footer-box footer-box footer-box-dos">
+                    <div>
+                        <p class="title-footer">Service</p>
+                        <div class="links-footer">
+                            <a href="">Home</a>
+                            <a href="#" id="apply4" class="btn-apply">Apply for a loan</a>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title-footer">Company</p>
+                        <div class="links-footer">
+                            <a href="./our-company.html#aboutUs">About Us</a>
+                            <a href="./our-company.html#hotItWorks">How it Works</a>
+                            <a href="./our-company.html#ourLeadership">Our Leadership</a>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title-footer">Legal</p>
+                        <div class="links-footer">
+                            <a href="./privacy">Privacy & Security</a>
+                            <a href="./termsOfUse">Terms of Use</a>
+                            <a href="./disclaimers">Disclaimers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 px-0 pb-4 footer-box footer-box-icons">
+                    <div>
+                        <p class="title-footer">Contact Us</p>
+                        <div class="icons-social-network">
+                        <a href="mailto:hello@solventa.com" target="_blank" style="display: flex; height: 20px;">
+                            <img src="assets/img/mail.png" alt="mail icon"><p>hello@solventa.com</p>
+                            </a>
+                    </div>
+                    <div>
+                        <a href="tel:13059842788" style="display: flex; height: 20px;">
+                            <img src="assets/img/telefono.png" alt="phone icon"><p>+1 305 984 2788</p>
+                        </a> 
+                    </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div> <p style="font-size: 12px;width:90%; margin:0 auto;">
+            Solventa’s Personal loans feature Annual Percentage Rates of 7.99%-35.97%. (0.20% interest rate). Interest rates are variable
+            subject to change at our discretion, at any time. Origination fees are between 2.9% to 8%, which is deducted from the loan proceeds.
+            The APR on your loan may be higher or lower and your loan offers may not have multiple term lengths available. Actual rate depends on
+            loan term, credit score, credit usage history, and other factors. There is no fee or penalty for repaying a loan early.
+            Solventa conducts a soft credit inquiry to check the rates and terms you qualify for, that will not affect your credit score. If you continue
+            with your application, a hard credit inquiry will be pulled and it may affect your credit score when your loan is issued.<br>
+            To qualify for lending products, a borrower must be a U.S. citizen or permanent resident in an eligible state and meet Solventa’s underwriting requirements. <br>
+            Terms and Conditions Apply.Solventa loans are originated by Solventa Corp., NMLS Company ID # 1926194<br>
+            Copyright 2020® Solventa Corp.<br>
+            All rights reserved<br>
+            Mailing Address<br>
+            19790 W Dixie Hwy,<br>
+            Miami, FL 33180</p>
+        </div>
+    </footer>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/swiper.min.css">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/main.js"></script>   
+
+
+<script>
+
+    var swiper = new Swiper('.swiper-container', {
+
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      spaceBetween: 80,
+      loop:'true',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+     },
+  
+
+});
+
+
+//Abrir Modal 
+var BtnApply = document.getElementsByClassName('btn-apply');
+
+for (i = 0; i < BtnApply.length; i++) {
+  BtnApply[i].addEventListener('click', function() {  
+
+    ModalContainer.style.display = "block";
+    home.classList.add("home-sin-path");
+    document.getElementById('enviomailok').style.display = 'none';
+   
+
+  });
+}      
+
+//Cerrar Modal
+cerrarmodal.addEventListener('click', () => {     
+    ModalContainer.style.display = "none";
+    home.classList.remove("home-sin-path");
+}); 
+cerrarmodal2.addEventListener('click', () => {     
+    ModalContainer.style.display = "none";
+    home.classList.remove("home-sin-path");
+}); 
+</script>
+
+<script>
+$(document).ready(function() {
+    $('form').submit(function(event) {
+       event.preventDefault();
+
+      var form = $('form');
+      $.ajax({
+          type : "POST",
+          url : "assets/php/contact_mail.php",
+          data: form.serialize(),
+        
+          success:function(data){
+              
+              //Clear Input Values
+              $("#name, #email, #subject").val("");
+              document.getElementById('enviomailok').style.display = 'block';
+
+              if( document.getElementById('enviomailok').style.display = 'block'){
+                document.getElementById('modalbox').style.display = 'none';
+              }
+              //document.getElementById('modalbox').style.display = 'none';
+          },
+      });
+      
+              
+    }); 
+ });
+
+
+</script>
+
+    
+</body>
+</html>

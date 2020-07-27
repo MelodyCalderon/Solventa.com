@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.091" height="30.385" viewBox="0 0 15.091 30.385">
+  <g id="coin" transform="translate(2295.266 -295.401)">
+    <g id="Group_12" data-name="Group 12" transform="translate(-2295.266 295.401)">
+      <g id="Group_11" data-name="Group 11" transform="translate(0 0)">
+        <path id="Path_14" data-name="Path 14" d="M185.809,110.166H182.75a3.16,3.16,0,1,1,0-6.321h6.118a1.428,1.428,0,0,0,0-2.856h-3.16v-3.16a1.428,1.428,0,1,0-2.856,0v3.16h-.1a6.016,6.016,0,1,0,0,12.032h3.059a3.16,3.16,0,0,1,0,6.321h-6.118a1.428,1.428,0,0,0,0,2.856h3.16v3.16a1.428,1.428,0,1,0,2.856,0V122.2h.1a6.016,6.016,0,0,0,0-12.032Z" transform="translate(-176.734 -96.401)" fill="#b2b2b2"/>
+      </g>
+    </g>
+  </g>
+</svg>
