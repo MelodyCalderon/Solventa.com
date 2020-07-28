@@ -166,59 +166,376 @@
           <div class="row row-home d-flex">
               <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <h1 class="h1">Get your Personal Loan <br> <span class="bold-h1">in 24hs</span> </h1>
-                    <div>
-                        <h2>Who's applying?</h2>
-                        <div class="d-flex">
-                            <input type="radio" name="howmany" id="myCheckbox1" />
-                                <label for="myCheckbox1"><img src="http://townandcountryremovals.com/wp-content/uploads/2013/10/firefox-logo-200x200.png" />
-                                    <p class="text-center">Just me</p>
-                                </label>
-                        
-                            <input type="radio" name="howmany" id="myCheckbox2" />
-                                <label for="myCheckbox2"><img src="http://tech21info.com/admin/wp-content/uploads/2013/03/chrome-logo-200x200.png" />
-                                    <p class="text-center">Two of Us</p>
-                                </label>
+                <div class="d-flex flex-column lead-box">
+                    <form action="">
+                        <div id="firstview">
+                            <div class="check-list d-flex">
+                                <div>
+                                    <img class="check-icon" src="assets/img/check-icon.svg" alt="check icon">
+                                    <span>100% online</span>
+                                </div>
+                                <div>
+                                    <img class="check-icon" src="assets/img/check-icon.svg" alt="check icon">
+                                    <span>Fixed rate</span>
+                                </div>
+                                <div>
+                                    <img class="check-icon" src="assets/img/check-icon.svg" alt="check icon">
+                                    <span>Up to $2.000</span>
+                                </div>    
+                            </div>
+        
+                            <div class="input">
+                                <input id="amount" type="number" placeholder="$0000"></input>
+                                <select id="moneyFor" class="input-dinero" >
+                                        <option value="" disabled selected>What's the money for?</option>
+                                        <option value="">Refinance my credit cards</option>
+                                        <option value="">Consolidate my debt</option>
+                                        <option value="">Improve my home</option>
+                                        <option value="">Refinance my car</option>
+                                        <option value="">Purchase a home</option>
+                                        <option value="">Buy something special</option>
+                                        <option value="">Fund a greeen loan</option>
+                                        <option value="">Finance my business</option>
+                                        <option value="">Pay for a vacation</option>
+                                        <option value="">Pay to move or relocate</option>
+                                        <option value="">Cover medical expenses</option>
+                                        <option value="">It's not listed here</option>
+        
+                                </select>
+                                <button class="btn-green-home btn-apply" onclick="next1()" >Apply now!</button>
                                 
+                            </div>
+        
+                            <div class="verificar">
+                               <p> <span class="security-icon"><img src="assets/img/seguridad-icono.svg" alt="icono seguridad"></span> Checking your rate doesn’t affect your loan score.</p>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next1()">
+                                    Next
+                                </p>
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="buttonNext">
-                        <p>Next</p>
-                    </div>
-
-                    <!-- Primera Vista 
-
-                    <div class="check-list d-flex">
-                        <div>
-                            <img class="check-icon" src="assets/img/check-icon.svg" alt="check icon">
-                            <span>100% online</span>
+                        <div id="secondview">
+                            <div id="">
+                                <h2 class="lead-title">Who's applying?</h2>
+                                <div class="d-flex">
+                                    <input type="radio" name="howmany" id="myCheckbox1" />
+                                    <label for="myCheckbox1"><img src="./assets/img/users-solventa-01.svg" />
+                                        <p class="text-center">Just me</p>
+                                    </label>
+                                    
+                                    <input type="radio" name="howmany" id="myCheckbox2" />
+                                    <label for="myCheckbox2"><img src="./assets/img/users-solventa-02.svg" />
+                                        <p class="text-center">Two of Us</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next2()">
+                                    Next
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <img class="check-icon" src="assets/img/check-icon.svg" alt="check icon">
-                            <span>Fixed rate</span>
+                        <div id="thirdview">
+                            <div id="">
+                                <h2 class="lead-title">What's your date of birth?</h2>
+                                <div class="d-flex">
+                                    <input id="date" type="date" value="2002-01-01">
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next3()">
+                                    Next
+                                </p>
+                            </div>
                         </div>
-                        <div>
-                            <img class="check-icon" src="assets/img/check-icon.svg" alt="check icon">
-                            <span>Up to $2.000</span>
-                        </div>    
-                    </div>
+                        <div id="fourthview">
+                            <div>
+                                <h2 class="lead-title">How much do you make in a year?</h2>
+                                <p>Your salary, retirement pay, or part-time jobs count</p>
+                                <input type="number" placeholder="$">
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox">
+                                    <label class="aclaration" for="checkbox">I have other sources of income that i might use to repay this loan</label>
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next4()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="fifthview">
+                            <div>
+                                <h2 class="lead-title">What's your name?</h2>
+                                <p>We need this to find your credit report, which helps us calculate your rate.Checking your rate won't affect your credit score.*</p>
+                                <label for="" class="classicLabel">First Name</label>
+                                <input type="text" name="" id="">
+                                <label for="" class="classicLabel mt-3">Last Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next5()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="sixthview">
+                            <div>
+                                <h2 class="lead-title">What's your home address?</h2>
+                                <p>We want to make sure we're looking for the right [name]</p>
+                                <label for="" class="classicLabel">Street Address</label>
+                                <input type="text">
+                                <label for="" class="classicLabel mt-3">City</label>
+                                <input type="text">
+                                <div class="d-flex row">
+                                    <div>
+                                        <label for="" class="classicLabel mt-3">State</label>
+                                        <input type="text">
+                                    </div>
+                                    <div>
+                                        <label for="" class="classicLabel mt-3">Zip</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next6()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="seventhview">
+                            <div>
+                                <h2 class="lead-title">What's your phone number?</h2>
+                                <p>Let us know the best number to reach you at.</p>
+                                <label for="" class="classicLabel">Phone Number</label>
+                                <select id="mobileoptions" class="input-dinero" >
+                                    <option value="" disabled selected>Mobile</option>
+                                    <option value="">One</option>
+                                    <option value="">Two</option>
+                                    <option value="">Three</option>
+                            </select>
+                                <input type="text" name="" id="" placeholder="(###) ### - ####">
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next7()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="eighthview">
+                            <div>
+                                <h2 class="lead-title">What's your email?</h2>
+                                <p>Last step before you get your rate and create your account! You'll use this to sign and manage youyr loan.</p>
+                                <label for="" class="classicLabel">Email</label>
+                                <input type="text" name="" id="" placeholder="your@email.com">
+                                <p class="secondarytext">By checking this box, I've read and agree to:</p>
+                                <div class="d-flex align-items-center">
+                                    <input type="checkbox">
+                                    <label for="" class="classicLabel mr-1">The <a href="#"> Terms of Use</a>, <a href="#">Privacy Policy</a>, <a href="#">ESIGN Act Consent</a>, and <a href="#">Credit Profile Authorization</a>.</label>
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next8()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="ninthview">
+                            <div>
+                                <h2 class="lead-title">You're almost there!</h2>
+                                <p>Create a password to secure your account.</p>
+                                <label for="" class="classicLabel">Password</label>
+                                <input type="text" name="" id="" placeholder="Create password">
+                                <p class="secondarytext">Must be at least 8 characters, with at least 1 number.</p>
+                            </div>
+                            <!-- <p>
+                                Checking your rate generates a soft credit inquiry, which is visible only to you. A hard credir inquiry that may affect your credit score only appears when your loan is issued.
+                            </p> -->
+                            <!--CREAR UNA PANTALLA DE ESPERA-->
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next9()">
+                                    Get Your Rate
+                                </p>
+                            </div>
+                        </div>
+                        <div id="tenthview">
+                            <!--CREAR UNA PANTALLA DE ESPERA-->
+                            <div>
+                                <p>cargando...</p>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next10()">
+                                    Get Your Rate
+                                </p>
+                            </div>
+                        </div>
+                        <div id="eleventhview">
+                            <div>
+                                <h2 class="lead-title">Choose an amount up to $5.000</h2>
+                                <!-- <p>Once your application is finalized we'll look for an investor. Loans are subject to investigation.</p> -->
 
-                    <div class="input">
-                        <input id="amount" type="number" placeholder="$0000"></input>
-                        <select id="moneyFor" class="input-dinero" >
-                                <option value="" disabled selected>What's the money for?</option>
-                                <option value="">$200 - $500</option>
-                                <option value="">$600 - $1000</option>
-                                <option value="">$1.100 - $1.500</option>
-                                <option value="">$1.600 - $2.000</option>
-                        </select>
-                        <button class="btn-green-home btn-apply" id="apply" >Apply now!</button>
-
-                    </div>
-
-                    <div class="verificar">
-                       <p> <span class="security-icon"><img src="assets/img/seguridad-icono.svg" alt="icono seguridad"></span> Checking your rate doesn’t affect your loan score.</p>
-                    </div> -->
+                                <div class="ticket">
+                                    <h5 class="text-center">36 PAYMENTS</h5>
+                                    <div class="ticket-info d-flex justify-content-between">
+                                        <p>Monthly Payment</p>
+                                        <p>$201,41</p>
+                                    </div>
+                                    <div class="ticket-info d-flex justify-content-between">
+                                        <p>Months</p>
+                                        <p>36</p>
+                                    </div>
+                                    <div class="ticket-info d-flex justify-content-between">
+                                        <p>Interest Rate</p>
+                                        <p>26.00%</p>
+                                    </div>
+                                    <div class="ticket-info d-flex justify-content-between">
+                                        <div>
+                                            <p>APR</p>
+                                            <!-- <div class="alert"></div> -->
+                                        </div>
+                                        <p>30.75%</p>
+                                    </div>
+                                    <div class="ticket-info d-flex justify-content-between">
+                                        <div>
+                                            <p>Origination Fee</p>
+                                            <!-- <div class="alert"></div> -->
+                                        </div>
+                                        <p>$300.00</p>
+                                    </div>
+                                    <div class="ticket-info d-flex justify-content-between">
+                                        <p>Cash to You</p>
+                                        <p>$4,700.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next11()">
+                                    Continue
+                                </p>
+                            </div>
+                        </div>
+                        <div id="twelfthview">
+                            <div>
+                                <h2>What's your current living situation?</h2>
+                                <p>Help us get a better sense of your overall expenses.</p>
+                                <div class="d-flex align-items-center">
+                                    <input type="radio">
+                                    <label for=""class="classicLabel">I pay rent</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input type="radio">
+                                    <label for=""class="classicLabel">I pay a mortgage</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input type="radio">
+                                    <label for=""class="classicLabel">I fully own</label>
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next12()">
+                                    Continue
+                                </p>
+                            </div>
+                        </div>
+                        <div id="thirteenthview">
+                            <div>
+                                <h2>What's your work situation?</h2>
+                                <p>Choose the one that best describes how you get most of your annual income.</p>
+                                <div class="d-flex align-items-center">
+                                    <input type="radio">
+                                    <label for=""class="classicLabel">I'm employed full-time</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input type="radio">
+                                    <label for=""class="classicLabel">I'm self-employed</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input type="radio">
+                                    <label for=""class="classicLabel">I'm retired</label>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <input type="radio">
+                                    <label for=""class="classicLabel">Other</label>
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next13()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="fourteenthview">
+                            <div>
+                                <h2>Where do you work?</h2>
+                                <p>If you have more than one job, use the one that gets you the most income.</p>
+                                <label for=""class="classicLabel">Employer Name</label>
+                                <input type="text">
+                                <label for=""class="classicLabel">Job Title</label>
+                                <input type="text">
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next14()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="fifteenthview">
+                            <div>
+                                <h2>How long have you been working here?</h2>
+                                <p>An estimate should work just fine</p>
+                                <label for=""class="classicLabel">Years</label>
+                                <input type="text" placeholder="Years">
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next15()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="sixteenthview">
+                            <div>
+                                <h2 class="lead-title">What's your work's contact info?</h2>
+                                <p>Use your employer's address and phone number.</p>
+                                <label for="" class="classicLabel">Work Address</label>
+                                <input type="text">
+                                <p class="secondarytext">Use the address where you reside (no P.O. boxes or commerical addresses).</p>
+                                <label for="" class="classicLabel mt-3">City</label>
+                                <input type="text">
+                                <div class="d-flex row">
+                                    <div>
+                                        <label for="" class="classicLabel mt-3">State</label>
+                                        <input type="text">
+                                    </div>
+                                    <div>
+                                        <label for="" class="classicLabel mt-3">Zip</label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next16()">
+                                    Next
+                                </p>
+                            </div>
+                        </div>
+                        <div id="seventeenthview">
+                            <div>
+                                <h2 class="lead-title">Do we have the right [name]?</h2>
+                                <p>Your Social Security number confirms and protects your identity</p>
+                                <label for="" class="classicLabel">SSN</label>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="buttonubication">
+                                <p id="next" class="buttonNext" onclick="next17()">
+                                    Finish
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                   
               </div>
               <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-box">
                    <img class="woman-home" src="assets/img/Women-header.png" alt="Women image">
@@ -277,14 +594,13 @@
 </section>
 
 <section class="prestamo">
-
     <div class="container">
             <div class="box-cards d-flex">
                     <div class="card-icon">
-                            <div>
-                                <img class="cel-icon" src="assets/img/celular.svg" alt="celular icon">
-                            </div>
-                            <p>Online request with payment calculator</p>
+                        <div>
+                            <img class="cel-icon" src="assets/img/celular.svg" alt="celular icon">
+                        </div>
+                        <p>Online request with payment calculator</p>
                     </div>
                     <div class="card-icon card-icon-middle">
                             <div>
@@ -371,7 +687,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 <section class="opiniones">
@@ -548,6 +863,76 @@
 <script src="assets/js/bootstrap.min.js"></script> 
 <script src="assets/js/swiper.min.js"></script>
 <script src="assets/js/main.js"></script>   
+<script>
+    function next1(){
+        document.getElementById("firstview").style.transform="translate(0%, -400px)";
+        document.getElementById("secondview").style.transform="translate(0%, -400px)";
+    }
+    function next2(){
+        document.getElementById("secondview").style.transform="translate(0%, -800px)";
+        document.getElementById("thirdview").style.transform="translate(0%, -800px)";
+    }
+    function next3(){
+        document.getElementById("thirdview").style.transform="translate(0%, -1200px)";
+        document.getElementById("fourthview").style.transform="translate(0%, -1200px)";
+    }
+    function next4(){
+        document.getElementById("fourthview").style.transform="translate(0%, -1600px)";
+        document.getElementById("fifthview").style.transform="translate(0%, -1600px)";
+    }
+    function next5(){
+        document.getElementById("fifthview").style.transform="translate(0%, -2000px)";
+        document.getElementById("sixthview").style.transform="translate(0%, -2000px)";
+    }
+    function next6(){
+        document.getElementById("sixthview").style.transform="translate(0%, -2400px)";
+        document.getElementById("seventhview").style.transform="translate(0%, -2400px)";
+    }
+    function next7(){
+        document.getElementById("seventhview").style.transform="translate(0%, -2800px)";
+        document.getElementById("eighthview").style.transform="translate(0%, -2800px)";
+    }
+    function next8(){
+        document.getElementById("eighthview").style.transform="translate(0%, -3200px)";
+        document.getElementById("ninthview").style.transform="translate(0%, -3200px)";
+    }
+    function next9(){
+        document.getElementById("ninthview").style.transform="translate(0%, -3600px)";
+        document.getElementById("tenthview").style.transform="translate(0%, -3600px)";
+    }
+    function next10(){
+        document.getElementById("tenthview").style.transform="translate(0%, -4000px)";
+        document.getElementById("eleventhview").style.transform="translate(0%, -4000px)";
+    }
+    function next11(){
+        document.getElementById("eleventhview").style.transform="translate(0%, -4400px)";
+        document.getElementById("twelfthview").style.transform="translate(0%, -4400px)";
+    }
+    function next12(){
+        document.getElementById("twelfthview").style.transform="translate(0%, -4800px)";
+        document.getElementById("thirteenthview").style.transform="translate(0%, -4800px)";
+    }
+    function next13(){
+        document.getElementById("thirteenthview").style.transform="translate(0%, -5200px)";
+        document.getElementById("fourteenthview").style.transform="translate(0%, -5200px)";
+    }
+    function next14(){
+        document.getElementById("fourteenthview").style.transform="translate(0%, -5600px)";
+        document.getElementById("fifteenthview").style.transform="translate(0%, -5600px)";
+    }
+    function next15(){
+        document.getElementById("fifteenthview").style.transform="translate(0%, -6000px)";
+        document.getElementById("sixteenthview").style.transform="translate(0%, -6000px)";
+    }
+    function next16(){
+        document.getElementById("sixteenthview").style.transform="translate(0%, -6400px)";
+        document.getElementById("seventeenthview").style.transform="translate(0%, -6400px)";
+    }
+    function next17(){
+        document.getElementById("seventeenthview").style.transform="translate(0%, -2800px)";
+        document.getElementById("e").style.transform="translate(0%, -2800px)";
+    }
+</script>
 
 <script>
 
