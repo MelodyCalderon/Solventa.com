@@ -167,7 +167,17 @@
               <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <h1 class="h1">Get your Personal Loan <br> <span class="bold-h1">in 24hs</span> </h1>
                 <div class="d-flex flex-column lead-box">
+                    <div id="">
+                        <input id="email" type="email" placeholder="Ingrese mail">
+                        <input id="password" type="password" placeholder="Ingrese contraseña">
+                        <button class="buttonubication" style="background-color: blueviolet;" onclick="registrar()"> 
+                            Enviar
+                        </button>
+                    </div>
                     <form action="">
+                        <div id="zeroview">
+
+                        </div>
                         <div id="firstview">
                             <div class="check-list d-flex">
                                 <div>
@@ -186,39 +196,39 @@
         
                             <div class="input">
                                 <input id="amount" type="number" placeholder="$0000"></input>
-                                <select id="moneyFor" class="input-dinero" >
-                                        <option value="" disabled selected>What's the money for?</option>
-                                        <option value="">Refinance my credit cards</option>
-                                        <option value="">Consolidate my debt</option>
-                                        <option value="">Improve my home</option>
-                                        <option value="">Refinance my car</option>
-                                        <option value="">Purchase a home</option>
-                                        <option value="">Buy something special</option>
-                                        <option value="">Fund a greeen loan</option>
-                                        <option value="">Finance my business</option>
-                                        <option value="">Pay for a vacation</option>
-                                        <option value="">Pay to move or relocate</option>
-                                        <option value="">Cover medical expenses</option>
-                                        <option value="">It's not listed here</option>
+                                <select id="moneyFor" name="moneyFor" class="input-dinero" >
+                                        <option value="none" disabled selected>What's the money for?</option>
+                                        <option value="Refinance my credit cards">Refinance my credit cards</option>
+                                        <option value="Consolidate my debt">Consolidate my debt</option>
+                                        <option value="Improve my home">Improve my home</option>
+                                        <option value="Refinance my car">Refinance my car</option>
+                                        <option value="Purchase a home">Purchase a home</option>
+                                        <option value="Buy something special">Buy something special</option>
+                                        <option value="Fund a greeen loan">Fund a greeen loan</option>
+                                        <option value="Finance my business">Finance my business</option>
+                                        <option value="Pay for a vacation">Pay for a vacation</option>
+                                        <option value="Pay to move or relocate">Pay to move or relocate</option>
+                                        <option value="Cover medical expenses">Cover medical expenses</option>
+                                        <option value="It's not listed here">It's not listed here</option>
         
                                 </select>
-                                <button class="btn-green-home btn-apply" onclick="next1()" >Apply now!</button>
+                                <p class="green-next" onclick="next1()" >Apply now!</p>
                                 
                             </div>
         
                             <div class="verificar">
                                <p> <span class="security-icon"><img src="assets/img/seguridad-icono.svg" alt="icono seguridad"></span> Checking your rate doesn’t affect your loan score.</p>
                             </div>
-                            <div class="buttonubication">
+                            <!-- <div class="buttonubication">
                                 <p id="next" class="buttonNext" onclick="next1()">
                                     Next
                                 </p>
-                            </div>
+                            </div> -->
                         </div>
                         <div id="secondview">
                             <div id="">
                                 <h2 class="lead-title">Who's applying?</h2>
-                                <div class="d-flex">
+                                <div class="d-flex whois">
                                     <input type="radio" name="howmany" id="myCheckbox1" />
                                     <label for="myCheckbox1"><img src="./assets/img/users-solventa-01.svg" />
                                         <p class="text-center">Just me</p>
@@ -240,7 +250,7 @@
                             <div id="">
                                 <h2 class="lead-title">What's your date of birth?</h2>
                                 <div class="d-flex">
-                                    <input id="date" type="date" value="2002-01-01">
+                                    <input id="date" type="date" name="birthday" value="2002-01-01">
                                 </div>
                             </div>
                             <div class="buttonubication">
@@ -253,7 +263,7 @@
                             <div>
                                 <h2 class="lead-title">How much do you make in a year?</h2>
                                 <p>Your salary, retirement pay, or part-time jobs count</p>
-                                <input type="number" placeholder="$">
+                                <input type="number" name="salary" placeholder="$">
                                 <div class="d-flex align-items-center">
                                     <input type="checkbox">
                                     <label class="aclaration" for="checkbox">I have other sources of income that i might use to repay this loan</label>
@@ -269,10 +279,10 @@
                             <div>
                                 <h2 class="lead-title">What's your name?</h2>
                                 <p>We need this to find your credit report, which helps us calculate your rate.Checking your rate won't affect your credit score.*</p>
-                                <label for="" class="classicLabel">First Name</label>
-                                <input type="text" name="" id="">
-                                <label for="" class="classicLabel mt-3">Last Name</label>
-                                <input type="text">
+                                <label for="Name" class="classicLabel">First Name</label>
+                                <input type="text" name="Name" id="">
+                                <label for="LastName" class="classicLabel mt-3">Last Name</label>
+                                <input type="text" name="LastName">
                             </div>
                             <div class="buttonubication">
                                 <p id="next" class="buttonNext" onclick="next5()">
@@ -309,14 +319,14 @@
                             <div>
                                 <h2 class="lead-title">What's your phone number?</h2>
                                 <p>Let us know the best number to reach you at.</p>
-                                <label for="" class="classicLabel">Phone Number</label>
-                                <select id="mobileoptions" class="input-dinero" >
+                                <label for=" PhoneNumber" class="classicLabel">Phone Number</label>
+                                <select id="mobileoptions" class="input-dinero" name="PhoneNumber">
                                     <option value="" disabled selected>Mobile</option>
                                     <option value="">One</option>
                                     <option value="">Two</option>
                                     <option value="">Three</option>
                             </select>
-                                <input type="text" name="" id="" placeholder="(###) ### - ####">
+                                <input type="number" name="PhoneNumber" id="" placeholder="(###) ### - ####" >
                             </div>
                             <div class="buttonubication">
                                 <p id="next" class="buttonNext" onclick="next7()">
@@ -328,12 +338,12 @@
                             <div>
                                 <h2 class="lead-title">What's your email?</h2>
                                 <p>Last step before you get your rate and create your account! You'll use this to sign and manage youyr loan.</p>
-                                <label for="" class="classicLabel">Email</label>
-                                <input type="text" name="" id="" placeholder="your@email.com">
+                                <label for="Email" class="classicLabel">Email</label>
+                                <input type="email" name="Email" id="" placeholder="your@email.com" >
                                 <p class="secondarytext">By checking this box, I've read and agree to:</p>
                                 <div class="d-flex align-items-center">
-                                    <input type="checkbox">
-                                    <label for="" class="classicLabel mr-1">The <a href="#"> Terms of Use</a>, <a href="#">Privacy Policy</a>, <a href="#">ESIGN Act Consent</a>, and <a href="#">Credit Profile Authorization</a>.</label>
+                                    <input type="checkbox" name="Agree" >
+                                    <label for="" class="classicLabel mr-1">The <a href="./termsOfUse"> Terms of Use</a>, <a href="./privacy">Privacy Policy</a>, <a href="#">ESIGN Act Consent</a>, and <a href="#">Credit Profile Authorization</a>.</label>
                                 </div>
                             </div>
                             <div class="buttonubication">
@@ -346,8 +356,8 @@
                             <div>
                                 <h2 class="lead-title">You're almost there!</h2>
                                 <p>Create a password to secure your account.</p>
-                                <label for="" class="classicLabel">Password</label>
-                                <input type="text" name="" id="" placeholder="Create password">
+                                <label for="password" class="classicLabel">Password</label>
+                                <input type="password" name="password" id="" placeholder="Create password">
                                 <p class="secondarytext">Must be at least 8 characters, with at least 1 number.</p>
                             </div>
                             <!-- <p>
@@ -355,21 +365,20 @@
                             </p> -->
                             <!--CREAR UNA PANTALLA DE ESPERA-->
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next9()">
+                                <p id="next" class="buttonNext" onclick="next9(), setTimeout('saludo()',4000);" >
                                     Get Your Rate
                                 </p>
                             </div>
                         </div>
-                        <div id="tenthview">
-                            <!--CREAR UNA PANTALLA DE ESPERA-->
-                            <div>
-                                <p>cargando...</p>
+                        <div id="tenthview" class="d-flex justify-content-center align-items-center">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img id="loader" src="./assets/img/loader.gif" alt="Loader">
                             </div>
-                            <div class="buttonubication">
+                            <!-- <div class="buttonubication">
                                 <p id="next" class="buttonNext" onclick="next10()">
                                     Get Your Rate
                                 </p>
-                            </div>
+                            </div> -->
                         </div>
                         <div id="eleventhview">
                             <div>
@@ -421,15 +430,15 @@
                                 <h2>What's your current living situation?</h2>
                                 <p>Help us get a better sense of your overall expenses.</p>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio">
+                                    <input type="radio" class="mr-1">
                                     <label for=""class="classicLabel">I pay rent</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio">
+                                    <input type="radio" class="mr-1">
                                     <label for=""class="classicLabel">I pay a mortgage</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio">
+                                    <input type="radio" class="mr-1">
                                     <label for=""class="classicLabel">I fully own</label>
                                 </div>
                             </div>
@@ -444,19 +453,19 @@
                                 <h2>What's your work situation?</h2>
                                 <p>Choose the one that best describes how you get most of your annual income.</p>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio">
+                                    <input type="radio" class="mr-1">
                                     <label for=""class="classicLabel">I'm employed full-time</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio">
+                                    <input type="radio" class="mr-1">
                                     <label for=""class="classicLabel">I'm self-employed</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio">
+                                    <input type="radio" class="mr-1">
                                     <label for=""class="classicLabel">I'm retired</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio">
+                                    <input type="radio" class="mr-1">
                                     <label for=""class="classicLabel">Other</label>
                                 </div>
                             </div>
@@ -862,7 +871,45 @@
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <script src="assets/js/bootstrap.min.js"></script> 
 <script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/main.js"></script>   
+<script src="assets/js/main.js"></script> 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC4NCeG_WePOhd2m-O3Hku0REVKpIg8AQo",
+        authDomain: "solventa-com.firebaseapp.com",
+        databaseURL: "https://solventa-com.firebaseio.com",
+        projectId: "solventa-com",
+        storageBucket: "solventa-com.appspot.com",
+        messagingSenderId: "435562980576",
+        appId: "1:435562980576:web:5e49ea1097584ddfc3dc85",
+        measurementId: "G-DEP231F7T0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script>
+        function registrar(){
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+    
+            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorCode);
+            console.log(errorMessage);
+            // ...
+            });
+        }
+    </script>
 <script>
     function next1(){
         document.getElementById("firstview").style.transform="translate(0%, -400px)";
@@ -934,6 +981,16 @@
     }
 </script>
 
+
+
+<script>
+
+function saludo(){
+        document.getElementById("tenthview").style.transform="translate(0%, -4000px)";
+        document.getElementById("eleventhview").style.transform="translate(0%, -4000px)";
+    }
+
+</script>
 <script>
 
     var swiper = new Swiper('.swiper-container', {
@@ -980,6 +1037,8 @@ cerrarmodal2.addEventListener('click', () => {
 }); 
 </script>
 
+
+
 <script>
 $(document).ready(function() {
     $('form').submit(function(event) {
@@ -1010,7 +1069,6 @@ $(document).ready(function() {
 
 
 </script>
-
 
 </body>
 </html>
