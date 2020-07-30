@@ -200,19 +200,19 @@
                             <div class="input">
                                 <input id="amount" type="text" placeholder="$0000"></input>
                                 <select id="moneyFor" name="moneyFor" class="input-dinero" >
-                                        <option value="1" disabled selected>What's the money for?</option>
-                                        <option value="2">Refinance my credit cards</option>
-                                        <option value="3">Consolidate my debt</option>
-                                        <option value="4">Improve my home</option>
-                                        <option value="5">Refinance my car</option>
-                                        <option value="6">Purchase a home</option>
-                                        <option value="7">Buy something special</option>
-                                        <option value="8">Fund a greeen loan</option>
-                                        <option value="9">Finance my business</option>
-                                        <option value="10">Pay for a vacation</option>
-                                        <option value="11">Pay to move or relocate</option>
-                                        <option value="12">Cover medical expenses</option>
-                                        <option value="13">It's not listed here</option>
+                                        <option value="What's the money for?" disabled selected>What's the money for?</option>
+                                        <option value="Refinance my credit cards">Refinance my credit cards</option>
+                                        <option value="Consolidate my debt">Consolidate my debt</option>
+                                        <option value="Improve my home">Improve my home</option>
+                                        <option value="Refinance my car">Refinance my car</option>
+                                        <option value="Purchase a home">Purchase a home</option>
+                                        <option value="Buy something special">Buy something special</option>
+                                        <option value="Fund a greeen loan">Fund a greeen loan</option>
+                                        <option value="Finance my business">Finance my business</option>
+                                        <option value="Pay for a vacation">Pay for a vacation</option>
+                                        <option value="Pay to move or relocate">Pay to move or relocate</option>
+                                        <option value="Cover medical expenses">Cover medical expenses</option>
+                                        <option value="It's not listed here">It's not listed here</option>
 
                                 </select>
                                 <p id="botoncito" class="green-next" onclick="next1(), recibir()" >Apply now!</p>
@@ -244,7 +244,7 @@
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next2(), nextGlobal()">
+                                <p id="next" class="buttonNext" onclick="next2(), send2()">
                                     Next
                                 </p>
                             </div>
@@ -919,7 +919,7 @@
                 console.error("Error adding document: ", error);
             });
         }
-        function nextGlobal(){
+        function send2(){
             var resultado = null;
             var howmany = document.getElementsByName("howmany");
             // Recorremos todos los valores del radio button para encontrar el
@@ -929,17 +929,18 @@
                     resultado = howmany[i].value;
             }
       
-          actualizarDatos('howmany',resultado)
+          actualizarDatos2('howmany',resultado)
         }
 
         function send3(){
             var birthday = document.getElementById("birthday").value;
             console.log(birthday)
-            actualizarDatos2('birthday',birthday)
+            actualizarDatos3('birthday',birthday)
         }
         function send4(){
             var AnualSalary = document.getElementById("AnualSalary").value;
             console.log(AnualSalary);
+            actualizarDatos4('AnualSalary',AnualSalary)
         }
         function send5(){
             var Name = document.getElementById("Name").value;
@@ -982,6 +983,11 @@
                     howmany: dato 
                 }
             }
+            if(nombre == 'birthday'){
+                obj1 = {
+                    birthday: dato 
+                }
+            }
             if(idUser != null){
 
                 var cityRef = db.collection('usuarios').doc(idUser);
@@ -993,9 +999,9 @@
             
         }
         function actualizarDatos2(nombre, dato){
-            var obj1 = {}
+            var obj2 = {}
             if(nombre == 'birthday'){
-                obj1 = {
+                obj2 = {
                     birthday: dato 
                 }
             }
@@ -1003,7 +1009,41 @@
 
                 var Ref = db.collection('usuarios').doc(idUser);
 
-                var setWithMerge = Ref.set(obj1, { merge: true });
+                var setWithMerge = Ref.set(obj2, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos3(nombre, dato){
+            var obj3 = {}
+            if(nombre == 'birthday'){
+                obj3 = {
+                    birthday: dato 
+                }
+            }
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj3, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos4(nombre, dato){
+            var obj4 = {}
+            if(nombre == 'AnualSalary'){
+                obj4 = {
+                    AnualSalary: dato 
+                }
+            }
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj4, { merge: true });
             }else{
                 alert('id user nuelo')
             }
