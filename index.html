@@ -167,13 +167,13 @@
               <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                 <h1 class="h1">Get your Personal Loan <br> <span class="bold-h1">in 24hs</span> </h1>
                 <div class="d-flex flex-column lead-box">
-                    <div id="">
+                    <!-- <div id="">
                         <input id="email" type="email" placeholder="Ingrese mail">
                         <input id="password" type="password" placeholder="Ingrese contraseña">
                         <button class="buttonubication" style="background-color: blueviolet;" onclick="registrar()"> 
                             Enviar
                         </button>
-                    </div>
+                    </div> -->
                     <form action="">
                         <div id="zeroview">
 
@@ -871,14 +871,15 @@
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <script src="assets/js/bootstrap.min.js"></script> 
 <script src="assets/js/swiper.min.js"></script>
-<script src="assets/js/main.js"></script> 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
-    
+<script src="assets/js/main.js"></script> 
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
     <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
