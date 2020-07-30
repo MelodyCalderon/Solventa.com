@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <title>Solventa</title>
@@ -36,10 +39,10 @@
 
         <div class="d-flex flex-nav-scroll">
             <a class="navbar-brand" href="#"><img class="solventa solventa-bar" src="assets/img/solventa-violeta.svg" alt="solventa" ></a>
-                    
+
             <!-- Menu Content -->
             <div class="menu menu-list" id="navbarSupportedContent22">
-            
+
                 <ul class="d-flex">
                     <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -59,12 +62,12 @@
                     <!-- <button class="btn-border-purple">My Account </button> -->
                     <button class="btn-green btn-green-top btn-apply" id="apply1">Apply Now!</button>
                 </ul>
-            
+
             </div>
             <!-- End Menu content -->
-            
+
         </div>
-    
+
 </nav>
 
 <div class="bcg-mobile" id="BcgMobile"></div>
@@ -73,10 +76,10 @@
 
     <div class="d-flex flex-nav-scroll">
         <a class="navbar-brand" href="#"><img class="solventa solventa-bar" src="assets/img/solventa-violeta.svg" alt="solventa" ></a>
-                
+
         <!-- Menu Content -->
         <div class="menu menu-list" id="navbarSupportedContent22">
-        
+
             <ul class="d-flex">
                 <li class="nav-item active">
                 <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
@@ -96,10 +99,10 @@
                 <!-- <button class="btn-border-purple">My Account </button> -->
                 <button class="btn-green btn-green-top btn-apply" id="apply1">Apply Now!</button>
             </ul>
-        
+
         </div>
         <!-- End Menu content -->
-        
+
     </div>
 
 </nav>
@@ -118,10 +121,10 @@
         <nav class="NavBar" id="NavBar">
             <div class="d-flex">
                 <a class="navbar-brand" href="#"><img class="solventa solventa-bar" src="assets/img/solventa-violeta.svg" alt="solventa" ></a>
-                        
+
                 <!-- Menu Content -->
                 <div class="menu menu-list" id="navbarSupportedContent22">
-                
+
                     <ul class="d-flex">
                     <li class="nav-item active">
                             <a class="nav-link" href="./index">Home <span class="sr-only">(current)</span></a>
@@ -141,10 +144,10 @@
                         <!-- <button class="btn-border-purple">My Account </button> -->
                         <button class="btn-border-purple btn-apply" id="apply2">Apply now!</button>
                     </ul>
-                
+
                 </div>
                 <!-- Menu content -->
-                
+
                 <!-- Menu button -->
                 <button class="navbar-toggler btn-menu" type="button" id="BtnMenu" >
                 <div class="Menu-Icon" id="AnimatedIcon">
@@ -170,7 +173,7 @@
                     <!-- <div id="">
                         <input id="email" type="email" placeholder="Ingrese mail">
                         <input id="password" type="password" placeholder="Ingrese contraseña">
-                        <button class="buttonubication" style="background-color: blueviolet;" onclick="registrar()"> 
+                        <button class="buttonubication" style="background-color: blueviolet;" onclick="registrar()">
                             Enviar
                         </button>
                     </div> -->
@@ -191,31 +194,31 @@
                                 <div>
                                     <img class="check-icon" src="assets/img/check-icon.svg" alt="check icon">
                                     <span>Up to $2.000</span>
-                                </div>    
+                                </div>
                             </div>
-        
+
                             <div class="input">
-                                <input id="amount" type="number" placeholder="$0000"></input>
+                                <input id="amount" type="text" placeholder="$0000"></input>
                                 <select id="moneyFor" name="moneyFor" class="input-dinero" >
-                                        <option value="none" disabled selected>What's the money for?</option>
-                                        <option value="Refinance my credit cards">Refinance my credit cards</option>
-                                        <option value="Consolidate my debt">Consolidate my debt</option>
-                                        <option value="Improve my home">Improve my home</option>
-                                        <option value="Refinance my car">Refinance my car</option>
-                                        <option value="Purchase a home">Purchase a home</option>
-                                        <option value="Buy something special">Buy something special</option>
-                                        <option value="Fund a greeen loan">Fund a greeen loan</option>
-                                        <option value="Finance my business">Finance my business</option>
-                                        <option value="Pay for a vacation">Pay for a vacation</option>
-                                        <option value="Pay to move or relocate">Pay to move or relocate</option>
-                                        <option value="Cover medical expenses">Cover medical expenses</option>
-                                        <option value="It's not listed here">It's not listed here</option>
-        
+                                        <option value="1" disabled selected>What's the money for?</option>
+                                        <option value="2">Refinance my credit cards</option>
+                                        <option value="3">Consolidate my debt</option>
+                                        <option value="4">Improve my home</option>
+                                        <option value="5">Refinance my car</option>
+                                        <option value="6">Purchase a home</option>
+                                        <option value="7">Buy something special</option>
+                                        <option value="8">Fund a greeen loan</option>
+                                        <option value="9">Finance my business</option>
+                                        <option value="10">Pay for a vacation</option>
+                                        <option value="11">Pay to move or relocate</option>
+                                        <option value="12">Cover medical expenses</option>
+                                        <option value="13">It's not listed here</option>
+
                                 </select>
-                                <p class="green-next" onclick="next1()" >Apply now!</p>
-                                
+                                <p id="botoncito" class="green-next" onclick="next1(), recibir()" >Apply now!</p>
+
                             </div>
-        
+
                             <div class="verificar">
                                <p> <span class="security-icon"><img src="assets/img/seguridad-icono.svg" alt="icono seguridad"></span> Checking your rate doesn’t affect your loan score.</p>
                             </div>
@@ -229,19 +232,19 @@
                             <div id="">
                                 <h2 class="lead-title">Who's applying?</h2>
                                 <div class="d-flex whois">
-                                    <input type="radio" name="howmany" id="myCheckbox1" />
+                                    <input type="radio" name="howmany" value="Just me" id="myCheckbox1" />
                                     <label for="myCheckbox1"><img src="./assets/img/users-solventa-01.svg" />
                                         <p class="text-center">Just me</p>
                                     </label>
-                                    
-                                    <input type="radio" name="howmany" id="myCheckbox2" />
+
+                                    <input type="radio" value="Two of Us" name="howmany" id="myCheckbox2" />
                                     <label for="myCheckbox2"><img src="./assets/img/users-solventa-02.svg" />
                                         <p class="text-center">Two of Us</p>
                                     </label>
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next2()">
+                                <p id="next" class="buttonNext" onclick="next2(), nextGlobal()">
                                     Next
                                 </p>
                             </div>
@@ -537,18 +540,18 @@
                                 <input type="text" name="" id="">
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next17()">
+                                <button id="next" class="buttonNext" onclick="next17()">
                                     Finish
-                                </p>
+                                </button>
                             </div>
                         </div>
                     </form>
                 </div>
-                   
+
               </div>
               <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 img-box">
                    <img class="woman-home" src="assets/img/Women-header.png" alt="Women image">
-              </div>                
+              </div>
           </div>
         </div>
      </div>
@@ -562,22 +565,22 @@
 
            <img class="close-icon" src="assets/img/close.svg" id="cerrarmodal" alt="cerrar icono">
            <form action="assets/php/contact_mail.php" method="POST">
-               
+
                 <div class="input-box anim-txt InputAnimacion1" >
                     <input id="name" class="input" type="text" placeholder="Name" name="name">
                     <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
                     <!-- <label>Name</label>                                     -->
-                </div> 
+                </div>
                 <div class="input-box anim-txt InputAnimacion1" >
                     <input class="input" type="text" placeholder="Phone Number" name="subject" id="subject">
                     <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
                     <!-- <label>Name</label>                                     -->
-                </div> 
+                </div>
                 <div class="input-box anim-txt InputAnimacion1" >
                     <input id="email" class="input" type="email" placeholder="E-mail" name="email" >
                     <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
                     <!-- <label>Name</label>                                     -->
-                </div> 
+                </div>
 
                 <button class="green-btn" type="submit">Send</button>
            </form>
@@ -587,7 +590,7 @@
 
         <img class="close-icon" src="assets/img/close.svg" id="cerrarmodal2" alt="cerrar icono">
         <p>Thank you for contacting us. Your message has been sent. </p>
-         
+
      </div>
 
    </div>
@@ -616,7 +619,7 @@
                                 <img class="ubicacion-icon" src="assets/img/ubicacion.svg" alt="gps icon">
                             </div>
                             <p>Fixed rate up to <br> 7,99% APR</p>
-                    </div>                    
+                    </div>
                     <div class="card-icon">
                             <div>
                                 <img class="reloj-icon" src="assets/img/reloj.svg" alt="reloj icon">
@@ -628,14 +631,14 @@
                                 <img class="candado-icon" src="assets/img/candado.svg" alt="candado icon">
                             </div>
                             <p>Fast, trustworthy <br> and safe</p>
-                    </div>                    
+                    </div>
                     <div class="card-icon">
                             <div>
                                 <img class="hand-icon" src="assets/img/hand.svg" alt="hand icon">
                             </div>
                             <p>Pay the loan without <br> any problem</p>
-                    </div>                    
-                    
+                    </div>
+
            </div>
         <h2 class="h2-white text-align" >Getting your <span class="h2-white-bold line-h2">loan </span> is easy</h2>
         <p class="text-align-center"> <span><img class="check-icon-white" src="assets/img/check-icon-white.svg" alt="check icon"></span> In just 4 simple steps you can have the money you need in your bank account</p>
@@ -649,38 +652,38 @@
                 <div class="step-1 d-flex">
                      <div class="number-box">
                          <img class="img-number" src="assets/img/uno.svg" alt="numero uno">
-                     </div> 
+                     </div>
                      <div class="text-box">
                          <p class="title-steps">Choose your loan</p>
                          <p>Choose which offer is better to meet your needs and achieve your goals.</p>
-                     </div> 
+                     </div>
                 </div>
                 <div class="step-2 d-flex">
                      <div class="number-box">
                          <img class="img-number" src="assets/img/dos.svg" alt="numero uno">
-                     </div> 
+                     </div>
                      <div class="text-box">
                          <p class="title-steps">Apply online</p>
                          <p>Complete our application in a few minutes with your personal and work data</p>
-                     </div> 
+                     </div>
                 </div>
                 <div class="step-3 d-flex">
                      <div class="number-box">
                          <img class="img-number" src="assets/img/tres.svg" alt="numero uno">
-                     </div> 
+                     </div>
                      <div class="text-box">
                          <p class="title-steps">We will contact you</p>
                          <p>Once the loan has been approved we will contact you to let you to end your request toghether.</p>
-                     </div> 
+                     </div>
                 </div>
                 <div class="step-4 d-flex">
                      <div class="number-box">
                          <img class="img-number" src="assets/img/cuatro.svg" alt="numero uno">
-                     </div> 
+                     </div>
                      <div class="text-box">
                          <p class="title-steps">Whithdraw money</p>
                          <p>We will deposit the money in your bank account so that you can take it out wherever you want.</p>
-                     </div> 
+                     </div>
                 </div>
 
             </div>
@@ -708,7 +711,7 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                            
+
                             <p class="opinion">"Excellent service. Quick approved loans have got me out of trouble on many times"</p>
                             <div class="stars">
                                 <img src="assets/img/estrella.png" alt="">
@@ -721,7 +724,7 @@
                             <p class="fecha">April, 2020 - Google Play</p>
                     </div>
                     <div class="swiper-slide">
-                        
+
                         <p class="opinion">"Very good customer support from Solventa. Easy to get loans, and also a really safe process with their new identity verification software. 100% recommendable"</p>
                         <div class="stars">
                             <img src="assets/img/estrella.png" alt="">
@@ -734,7 +737,7 @@
                         <p class="fecha">April, 2020 - Google Play</p>
                     </div>
                     <div class="swiper-slide">
-                        
+
                         <p class="opinion">"Excellent support, emergency loans, super easy, simple."</p>
                         <div class="stars">
                             <img src="assets/img/estrella.png" alt="">
@@ -747,7 +750,7 @@
                         <p class="fecha">April, 2020 - Google Play</p>
                     </div>
                     <div class="swiper-slide">
-                            
+
                             <p class="opinion">"I'm comfortable with Solventa, it's a really quick process and excellent service."</p>
                             <div class="stars">
                                 <img src="assets/img/estrella.png" alt="">
@@ -760,7 +763,7 @@
                             <p class="fecha">March, 2020 - Google Play</p>
                     </div>
                     <div class="swiper-slide">
-                        
+
                             <p class="opinion">"Excellent support, taking care of the client's request. Thanks for your help"</p>
                             <div class="stars">
                                 <img src="assets/img/estrella.png" alt="">
@@ -771,7 +774,7 @@
                             </div>
                             <p class="name">Aura E López</p>
                             <p class="fecha">Google Play</p>
-                    </div>            
+                    </div>
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-pagination"></div>
@@ -793,8 +796,8 @@
          </div>
     </div-->
 
-    
-        
+
+
 </section>
 
 <footer>
@@ -841,7 +844,7 @@
                 <div>
                     <a href="tel:13059842788" style="display: flex; height: 20px;">
                         <img src="assets/img/telefono.png" alt="phone icon"><p>+1 305 984 2788</p>
-                    </a> 
+                    </a>
                 </div>
                     </div>
             </div>
@@ -866,13 +869,11 @@
 </footer>
 
 
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/swiper.min.css">
-<link rel="stylesheet" href="assets/fonts/fonts.css">
-<script src="assets/js/bootstrap.min.js"></script> 
+
+<script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/swiper.min.js"></script>
 
-<script src="assets/js/main.js"></script> 
+<script src="assets/js/main.js"></script>
   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
@@ -881,6 +882,11 @@
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
     <script>
+
+
+       // Initialize Cloud Firestore through Firebase
+
+
     // Your web app's Firebase configuration
     var firebaseConfig = {
         apiKey: "AIzaSyC4NCeG_WePOhd2m-O3Hku0REVKpIg8AQo",
@@ -894,22 +900,107 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
     firebase.analytics();
     </script>
     <script>
-        function registrar(){
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-    
-            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(errorCode);
-            console.log(errorMessage);
-            // ...
+        
+        var idUser = null
+        function recibir(){
+            var PrimeraEleccionDePrestamo = document.getElementById("amount").value;
+            var moneyFor = document.getElementById("moneyFor").value;
+            console.log(moneyFor);
+
+            db.collection("usuarios").add({
+                ValorPretendido: PrimeraEleccionDePrestamo,
+                moneyFor: moneyFor,
+            })
+            .then(function(docRef) {
+                 idUser = docRef.id
+                console.log(idUser);
+            })
+            .catch(function(error) {
+                console.error("Error adding document: ", error);
             });
         }
+        function nextGlobal(){
+            console.log('enrtar')
+            var resultado = null;
+            var howmany = document.getElementsByName("howmany");
+            // Recorremos todos los valores del radio button para encontrar el
+            // seleccionado
+            for (var i = 0; i < howmany.length; i++) {
+                if (howmany[i].checked)
+                    resultado = howmany[i].value;
+            }
+      
+          actualizarDatos('howmany',resultado)
+        }
+
+        
+        function actualizarDatos(nombre, dato){
+            var obj = {}
+            if(nombre == 'howmany'){
+                obj = {
+                    howmany: dato 
+                }
+            }
+            if(idUser != null){
+
+                var cityRef = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = cityRef.set(obj, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+
+        // document.getELementById("botoncito").addEventListener("click", recibir())
+        // function registrar(){
+        //     var email = document.getElementById('email').value;
+        //     var password = document.getElementById('password').value;
+
+        //     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        //     // Handle Errors here.
+        //     var errorCode = error.code;
+        //     var errorMessage = error.message;
+        //     console.log(errorCode);
+        //     console.log(errorMessage);
+        //     // ...
+        //     });
+        // }
+    </script>
+    <script>
+        // Add a new document in collection "cities"
+        // db.collection("e3aWsV3TLrm98MpSZjdL").doc("Usuarios").set({
+        //     EmployerName: "Los Angeles",
+        //     JobTitle: "CA",
+        //     LastName: "USA"
+        // })
+        // .then(function() {
+        //     console.log("Document successfully written!");
+        // })
+        // .catch(function(error) {
+        //     console.error("Error writing document: ", error);
+        // });
+
+        // var cityRef = db.collection('Usuarios').doc('e3aWsV3TLrm98MpSZjdL');
+
+        // var setWithMerge = cityRef.set({
+        //     capital: true
+        // }, { merge: true });
+        // db.collection("Usuarios").doc("e3aWsV3TLrm98MpSZjdL").set({
+        //     EmployerName: "Santiago",
+        //     JobTitle: "Licenciado en reparticiones profesional",
+        //     LastName: "Morabito"
+        // })
+        // .then(function() {
+        //     console.log("Document successfully written!");
+        // })
+        // .catch(function(error) {
+        //     console.error("Error writing document: ", error);
+        // });
     </script>
 <script>
     function next1(){
@@ -978,7 +1069,7 @@
     }
     function next17(){
         document.getElementById("seventeenthview").style.transform="translate(0%, -2800px)";
-        document.getElementById("e").style.transform="translate(0%, -2800px)";
+        // document.getElementById("e").style.transform="translate(0%, -2800px)";
     }
 </script>
 
@@ -1008,34 +1099,34 @@ function saludo(){
         delay: 2500,
         disableOnInteraction: false,
      },
-  
+
 
 });
 
 
-//Abrir Modal 
+//Abrir Modal
 var BtnApply = document.getElementsByClassName('btn-apply');
 
 for (i = 0; i < BtnApply.length; i++) {
-  BtnApply[i].addEventListener('click', function() {  
+  BtnApply[i].addEventListener('click', function() {
 
     ModalContainer.style.display = "block";
     home.classList.add("home-sin-path");
     document.getElementById('enviomailok').style.display = 'none';
-   
+
 
   });
-}      
+}
 
 //Cerrar Modal
-cerrarmodal.addEventListener('click', () => {     
+cerrarmodal.addEventListener('click', () => {
     ModalContainer.style.display = "none";
     home.classList.remove("home-sin-path");
-}); 
-cerrarmodal2.addEventListener('click', () => {     
+});
+cerrarmodal2.addEventListener('click', () => {
     ModalContainer.style.display = "none";
     home.classList.remove("home-sin-path");
-}); 
+});
 </script>
 
 
@@ -1050,9 +1141,9 @@ $(document).ready(function() {
           type : "POST",
           url : "assets/php/contact_mail.php",
           data: form.serialize(),
-        
+
           success:function(data){
-              
+
               //Clear Input Values
               $("#name, #email, #subject").val("");
               document.getElementById('enviomailok').style.display = 'block';
@@ -1063,11 +1154,34 @@ $(document).ready(function() {
               //document.getElementById('modalbox').style.display = 'none';
           },
       });
-      
-              
-    }); 
+
+
+    });
  });
 
+
+</script>
+
+<script>
+    // function recibir(){
+    //     console.log(document.getElementById("amount").value);
+    // }
+    // function recibir(){
+    //     var PrimeraEleccionDePrestamo = document.getElementById("amount").value;
+    //     console.log(PrimeraEleccionDePrestamo);
+    // }
+    // var PrimeraEleccionDePrestamo = document.getElementById("amount").value;
+    //     console.log(PrimeraEleccionDePrestamo);
+
+        // document.getELementById("botoncito").addEventListener("click", recibir())
+    // var PrimeraEleccionDePrestamo = document.getElementById("amount").value;
+    //  console.log(PrimeraEleccionDePrestamo);
+    // var MotivoPrestamo = document.getElementById("moneyFor");
+    // var indiceSeleccionado = MotivoPrestamo.selectedIndex;
+    // var opcionSeleccionada = MotivoPrestamo.options[indiceSeleccionado];
+    // var textoSeleccionado = opcionSeleccionada.text;
+    // var valorSeleccionado = opcionSeleccionada.value;
+    // var valorSeleccionado = lista.options[lista.selectedIndex].text;
 
 </script>
 
