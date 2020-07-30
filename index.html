@@ -253,11 +253,11 @@
                             <div id="">
                                 <h2 class="lead-title">What's your date of birth?</h2>
                                 <div class="d-flex">
-                                    <input id="date" type="date" name="birthday" value="2002-01-01">
+                                    <input id="birthday" type="date" name="birthday" value="2002-01-01">
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next3()">
+                                <p id="next" class="buttonNext" onclick="next3(), send3()">
                                     Next
                                 </p>
                             </div>
@@ -266,14 +266,14 @@
                             <div>
                                 <h2 class="lead-title">How much do you make in a year?</h2>
                                 <p>Your salary, retirement pay, or part-time jobs count</p>
-                                <input type="number" name="salary" placeholder="$">
+                                <input id="AnualSalary" type="number" name="salary" placeholder="$">
                                 <div class="d-flex align-items-center">
                                     <input type="checkbox">
                                     <label class="aclaration" for="checkbox">I have other sources of income that i might use to repay this loan</label>
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next4()">
+                                <p id="next" class="buttonNext" onclick="next4(),send4()">
                                     Next
                                 </p>
                             </div>
@@ -283,12 +283,12 @@
                                 <h2 class="lead-title">What's your name?</h2>
                                 <p>We need this to find your credit report, which helps us calculate your rate.Checking your rate won't affect your credit score.*</p>
                                 <label for="Name" class="classicLabel">First Name</label>
-                                <input type="text" name="Name" id="">
+                                <input id="Name" type="text" name="Name" id="">
                                 <label for="LastName" class="classicLabel mt-3">Last Name</label>
-                                <input type="text" name="LastName">
+                                <input id="LastName" type="text" name="LastName">
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next5()">
+                                <p id="next" class="buttonNext" onclick="next5(), send5()">
                                     Next
                                 </p>
                             </div>
@@ -298,22 +298,22 @@
                                 <h2 class="lead-title">What's your home address?</h2>
                                 <p>We want to make sure we're looking for the right [name]</p>
                                 <label for="" class="classicLabel">Street Address</label>
-                                <input type="text">
+                                <input id="UserStreet" type="text">
                                 <label for="" class="classicLabel mt-3">City</label>
-                                <input type="text">
+                                <input id="UserCity" type="text">
                                 <div class="d-flex row">
                                     <div>
                                         <label for="" class="classicLabel mt-3">State</label>
-                                        <input type="text">
+                                        <input id="UserState" type="text">
                                     </div>
                                     <div>
                                         <label for="" class="classicLabel mt-3">Zip</label>
-                                        <input type="text">
+                                        <input id="UserZip" type="text">
                                     </div>
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next6()">
+                                <p id="next" class="buttonNext" onclick="next6(), send6()">
                                     Next
                                 </p>
                             </div>
@@ -325,14 +325,14 @@
                                 <label for=" PhoneNumber" class="classicLabel">Phone Number</label>
                                 <select id="mobileoptions" class="input-dinero" name="PhoneNumber">
                                     <option value="" disabled selected>Mobile</option>
-                                    <option value="">One</option>
-                                    <option value="">Two</option>
-                                    <option value="">Three</option>
+                                    <option value="One">One</option>
+                                    <option value="Two">Two</option>
+                                    <option value="Three">Three</option>
                             </select>
-                                <input type="number" name="PhoneNumber" id="" placeholder="(###) ### - ####" >
+                                <input type="number" name="PhoneNumber" id="PhoneNumber"placeholder="(###) ### - ####" >
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next7()">
+                                <p id="next" class="buttonNext" onclick="next7(), send7()">
                                     Next
                                 </p>
                             </div>
@@ -342,7 +342,7 @@
                                 <h2 class="lead-title">What's your email?</h2>
                                 <p>Last step before you get your rate and create your account! You'll use this to sign and manage youyr loan.</p>
                                 <label for="Email" class="classicLabel">Email</label>
-                                <input type="email" name="Email" id="" placeholder="your@email.com" >
+                                <input id="UserEmail" type="email" name="Email" id="" placeholder="your@email.com" >
                                 <p class="secondarytext">By checking this box, I've read and agree to:</p>
                                 <div class="d-flex align-items-center">
                                     <input type="checkbox" name="Agree" >
@@ -350,7 +350,7 @@
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next8()">
+                                <p id="next" class="buttonNext" onclick="next8(), send8()">
                                     Next
                                 </p>
                             </div>
@@ -433,15 +433,15 @@
                                 <h2>What's your current living situation?</h2>
                                 <p>Help us get a better sense of your overall expenses.</p>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio" class="mr-1">
+                                    <input name="Livingsituation" type="radio" id="I pay rent" class="mr-1">
                                     <label for=""class="classicLabel">I pay rent</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio" class="mr-1">
+                                    <input name="Livingsituation" type="radio" id="I pay a mortgage" class="mr-1">
                                     <label for=""class="classicLabel">I pay a mortgage</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio" class="mr-1">
+                                    <input name="Livingsituation" type="radio" id="I fully own" class="mr-1">
                                     <label for=""class="classicLabel">I fully own</label>
                                 </div>
                             </div>
@@ -875,18 +875,13 @@
 
 <script src="assets/js/main.js"></script>
   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
   <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
-    <script>
-
-
-       // Initialize Cloud Firestore through Firebase
-
-
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+<script>
+    // Initialize Cloud Firestore through Firebase
     // Your web app's Firebase configuration
     var firebaseConfig = {
         apiKey: "AIzaSyC4NCeG_WePOhd2m-O3Hku0REVKpIg8AQo",
@@ -914,6 +909,7 @@
             db.collection("usuarios").add({
                 ValorPretendido: PrimeraEleccionDePrestamo,
                 moneyFor: moneyFor,
+
             })
             .then(function(docRef) {
                  idUser = docRef.id
@@ -924,7 +920,6 @@
             });
         }
         function nextGlobal(){
-            console.log('enrtar')
             var resultado = null;
             var howmany = document.getElementsByName("howmany");
             // Recorremos todos los valores del radio button para encontrar el
@@ -937,7 +932,49 @@
           actualizarDatos('howmany',resultado)
         }
 
-        
+        function send3(){
+            var birthday = document.getElementById("birthday").value;
+            console.log(birthday)
+            actualizarDatos2('birthday',birthday)
+        }
+        function send4(){
+            var AnualSalary = document.getElementById("AnualSalary").value;
+            console.log(AnualSalary);
+        }
+        function send5(){
+            var Name = document.getElementById("Name").value;
+            console.log(Name);
+            var LastName = document.getElementById("LastName").value;
+            console.log(LastName);
+        }
+        function send6(){
+            var UserStreet = document.getElementById("UserStreet").value;
+            console.log(UserStreet);
+            var UserCity = document.getElementById("UserCity").value;
+            console.log(UserCity);
+            var UserState = document.getElementById("UserState").value;
+            console.log(UserState);
+            var UserZip = document.getElementById("UserZip").value;
+            console.log(UserZip);
+        }
+        function send7(){
+            var PhoneNumber = document.getElementById("PhoneNumber").value;
+            console.log(PhoneNumber);
+            var mobileoptions = document.getElementById("mobileoptions").value;
+            console.log(mobileoptions);
+        }
+        function send8(){
+            var UserEmail = document.getElementById("UserEmail").value;
+            console.log(UserEmail)
+        }
+        function send9(){
+            var Password = document.getElementById("Password").value;
+            console.log(Password)
+        }
+        // function send12(){
+        //     var 
+        // }
+
         function actualizarDatos(nombre, dato){
             var obj = {}
             if(nombre == 'howmany'){
@@ -950,6 +987,23 @@
                 var cityRef = db.collection('usuarios').doc(idUser);
 
                 var setWithMerge = cityRef.set(obj, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos2(nombre, dato){
+            var obj1 = {}
+            if(nombre == 'birthday'){
+                obj1 = {
+                    birthday: dato 
+                }
+            }
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj1, { merge: true });
             }else{
                 alert('id user nuelo')
             }
@@ -1073,8 +1127,6 @@
     }
 </script>
 
-
-
 <script>
 
 function saludo(){
@@ -1083,6 +1135,7 @@ function saludo(){
     }
 
 </script>
+
 <script>
 
     var swiper = new Swiper('.swiper-container', {
@@ -1128,8 +1181,6 @@ cerrarmodal2.addEventListener('click', () => {
     home.classList.remove("home-sin-path");
 });
 </script>
-
-
 
 <script>
 $(document).ready(function() {
