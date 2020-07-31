@@ -178,9 +178,6 @@
                         </button>
                     </div> -->
                     <form action="">
-                        <div id="zeroview">
-
-                        </div>
                         <div id="firstview">
                             <div class="check-list d-flex">
                                 <div>
@@ -198,8 +195,8 @@
                             </div>
 
                             <div class="input">
-                                <input id="amount" type="text" placeholder="$0000"></input>
-                                <select id="moneyFor" name="moneyFor" class="input-dinero" >
+                                <input id="amount" type="text" placeholder="$0000" required></input>
+                                <select id="moneyFor" name="moneyFor" class="input-dinero" required>
                                         <option value="What's the money for?" disabled selected>What's the money for?</option>
                                         <option value="Refinance my credit cards">Refinance my credit cards</option>
                                         <option value="Consolidate my debt">Consolidate my debt</option>
@@ -215,7 +212,9 @@
                                         <option value="It's not listed here">It's not listed here</option>
 
                                 </select>
-                                <p id="botoncito" class="green-next" onclick="next1(), recibir()" >Apply now!</p>
+                                <button type="submit">
+                                    <p id="botoncito" class="green-next" onclick="continueLead(),next1(), recibir()" >Apply now!</p>
+                                </button>
 
                             </div>
 
@@ -269,11 +268,11 @@
                                 <input id="AnualSalary" type="number" name="salary" placeholder="$">
                                 <div class="d-flex align-items-center">
                                     <input type="checkbox">
-                                    <label class="aclaration" for="checkbox">I have other sources of income that i might use to repay this loan</label>
+                                    <label class="aclaration" for="checkbox" required>I have other sources of income that i might use to repay this loan</label>
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next4(),send4()">
+                                <p id="next" class="buttonNext" type="submit" onclick="next4(),send4()">
                                     Next
                                 </p>
                             </div>
@@ -377,11 +376,6 @@
                             <div class="d-flex justify-content-center align-items-center">
                                 <img id="loader" src="./assets/img/loader.gif" alt="Loader">
                             </div>
-                            <!-- <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next10()">
-                                    Get Your Rate
-                                </p>
-                            </div> -->
                         </div>
                         <div id="eleventhview">
                             <div>
@@ -423,7 +417,7 @@
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next11()">
+                                <p id="next" class="buttonNext" onclick="next11(),send11()">
                                     Continue
                                 </p>
                             </div>
@@ -446,7 +440,7 @@
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next12()">
+                                <p id="next" class="buttonNext" onclick="next12(),send12()">
                                     Continue
                                 </p>
                             </div>
@@ -456,24 +450,24 @@
                                 <h2>What's your work situation?</h2>
                                 <p>Choose the one that best describes how you get most of your annual income.</p>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio" class="mr-1">
+                                    <input type="radio" class="mr-1" name="typeAnnualIncome">
                                     <label for=""class="classicLabel">I'm employed full-time</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio" class="mr-1">
+                                    <input type="radio" class="mr-1" name="typeAnnualIncome">
                                     <label for=""class="classicLabel">I'm self-employed</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio" class="mr-1">
+                                    <input type="radio" class="mr-1" name="typeAnnualIncome">
                                     <label for=""class="classicLabel">I'm retired</label>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="radio" class="mr-1">
+                                    <input type="radio" class="mr-1" name="typeAnnualIncome">
                                     <label for=""class="classicLabel">Other</label>
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next13()">
+                                <p id="next" class="buttonNext" onclick="next13(),send13()">
                                     Next
                                 </p>
                             </div>
@@ -483,12 +477,12 @@
                                 <h2>Where do you work?</h2>
                                 <p>If you have more than one job, use the one that gets you the most income.</p>
                                 <label for=""class="classicLabel">Employer Name</label>
-                                <input type="text">
+                                <input id="EmployerName" type="text">
                                 <label for=""class="classicLabel">Job Title</label>
-                                <input type="text">
+                                <input id="JobTitle" type="text">
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next14()">
+                                <p id="next" class="buttonNext" onclick="next14(),send14()">
                                     Next
                                 </p>
                             </div>
@@ -498,10 +492,10 @@
                                 <h2>How long have you been working here?</h2>
                                 <p>An estimate should work just fine</p>
                                 <label for=""class="classicLabel">Years</label>
-                                <input type="text" placeholder="Years">
+                                <input type="text" id="WorkingYears" placeholder="Years">
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next15()">
+                                <p id="next" class="buttonNext" onclick="next15(),send15()">
                                     Next
                                 </p>
                             </div>
@@ -511,23 +505,23 @@
                                 <h2 class="lead-title">What's your work's contact info?</h2>
                                 <p>Use your employer's address and phone number.</p>
                                 <label for="" class="classicLabel">Work Address</label>
-                                <input type="text">
+                                <input type="text" id="WorkAddress">
                                 <p class="secondarytext">Use the address where you reside (no P.O. boxes or commerical addresses).</p>
                                 <label for="" class="classicLabel mt-3">City</label>
-                                <input type="text">
+                                <input type="text" id="WorkCity">
                                 <div class="d-flex row">
                                     <div>
                                         <label for="" class="classicLabel mt-3">State</label>
-                                        <input type="text">
+                                        <input type="text" id="WorkState">
                                     </div>
                                     <div>
                                         <label for="" class="classicLabel mt-3">Zip</label>
-                                        <input type="text">
+                                        <input type="text" id="WorkZip">
                                     </div>
                                 </div>
                             </div>
                             <div class="buttonubication">
-                                <p id="next" class="buttonNext" onclick="next16()">
+                                <p id="next" class="buttonNext" onclick="next16(),send16()">
                                     Next
                                 </p>
                             </div>
@@ -537,10 +531,10 @@
                                 <h2 class="lead-title">Do we have the right [name]?</h2>
                                 <p>Your Social Security number confirms and protects your identity</p>
                                 <label for="" class="classicLabel">SSN</label>
-                                <input type="text" name="" id="">
+                                <input type="text" name="" id="SSN">
                             </div>
                             <div class="buttonubication">
-                                <button id="next" class="buttonNext" onclick="next17()">
+                                <button id="next" class="buttonNext"  onclick="next17(),send17()">
                                     Finish
                                 </button>
                             </div>
@@ -559,7 +553,7 @@
     <div id="BtnScrollDown">
         <img class="scroll-arrow" src="assets/img/scroll-down.svg" alt="scroll arrow" >
     </div>
-
+<!-- 
    <div class="modal-container" id="ModalContainer">
       <div class="modal-box" id="modalbox">
 
@@ -570,17 +564,17 @@
                     <input id="name" class="input" type="text" placeholder="Name" name="name">
                     <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
                     <!-- <label>Name</label>                                     -->
-                </div>
+                <!-- </div>
                 <div class="input-box anim-txt InputAnimacion1" >
                     <input class="input" type="text" placeholder="Phone Number" name="subject" id="subject">
                     <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
                     <!-- <label>Name</label>                                     -->
-                </div>
+                <!-- </div>
                 <div class="input-box anim-txt InputAnimacion1" >
                     <input id="email" class="input" type="email" placeholder="E-mail" name="email" >
                     <span class="bar"><span id="Mje"></span><span id="MjeOK"></span></span>
                     <!-- <label>Name</label>                                     -->
-                </div>
+                <!-- </div>
 
                 <button class="green-btn" type="submit">Send</button>
            </form>
@@ -593,7 +587,7 @@
 
      </div>
 
-   </div>
+   </div> -->
 
 
  </section>
@@ -901,7 +895,12 @@
     <script>
         
         var idUser = null
-        function recibir(){
+
+        function continueLead(){
+            if (required == false){
+                console.log('error')
+            } else {
+                function recibir(){
             var PrimeraEleccionDePrestamo = document.getElementById("amount").value;
             var moneyFor = document.getElementById("moneyFor").value;
             console.log(moneyFor);
@@ -919,6 +918,26 @@
                 console.error("Error adding document: ", error);
             });
         }
+        }
+    }
+        // function recibir(){
+        //     var PrimeraEleccionDePrestamo = document.getElementById("amount").value;
+        //     var moneyFor = document.getElementById("moneyFor").value;
+        //     console.log(moneyFor);
+
+        //     db.collection("usuarios").add({
+        //         ValorPretendido: PrimeraEleccionDePrestamo,
+        //         moneyFor: moneyFor,
+
+        //     })
+        //     .then(function(docRef) {
+        //          idUser = docRef.id
+        //         console.log(idUser);
+        //     })
+        //     .catch(function(error) {
+        //         console.error("Error adding document: ", error);
+        //     });
+        // }
         function send2(){
             var resultado = null;
             var howmany = document.getElementsByName("howmany");
@@ -931,7 +950,6 @@
       
           actualizarDatos2('howmany',resultado)
         }
-
         function send3(){
             var birthday = document.getElementById("birthday").value;
             console.log(birthday)
@@ -947,6 +965,8 @@
             console.log(Name);
             var LastName = document.getElementById("LastName").value;
             console.log(LastName);
+            actualizarDatos5('Name',Name)
+            actualizarDatos5('LastName',LastName)
         }
         function send6(){
             var UserStreet = document.getElementById("UserStreet").value;
@@ -957,35 +977,92 @@
             console.log(UserState);
             var UserZip = document.getElementById("UserZip").value;
             console.log(UserZip);
+            actualizarDatos6('UserStreet',UserStreet)
+            actualizarDatos6('UserCity',UserCity)
+            actualizarDatos6('UserState',UserState)
+            actualizarDatos6('UserZip',UserZip)
         }
         function send7(){
             var PhoneNumber = document.getElementById("PhoneNumber").value;
             console.log(PhoneNumber);
             var mobileoptions = document.getElementById("mobileoptions").value;
             console.log(mobileoptions);
+            actualizarDatos7('mobileoptions',mobileoptions)
+            actualizarDatos7('PhoneNumber',PhoneNumber)
         }
         function send8(){
             var UserEmail = document.getElementById("UserEmail").value;
             console.log(UserEmail)
+            actualizarDatos8('UserEmail',UserEmail)
         }
         function send9(){
             var Password = document.getElementById("Password").value;
             console.log(Password)
+            actualizarDatos9('Password',Password)
         }
-        // function send12(){
-        //     var 
-        // }
+        function send12(){
+            var LivingsituationFinal = null;
+            var Livingsituation = document.getElementsByName("Livingsituation");
+            // Recorremos todos los valores del radio button para encontrar el
+            // seleccionado
+            for (var i = 0; i < Livingsituation.length; i++) {
+                if (Livingsituation[i].checked)
+                LivingsituationFinal = Livingsituation[i].value;
+            }
+      
+          actualizarDatos12('Livingsituation',LivingsituationFinal)
+        }
+        function send13(){
+            var typeAnnualIncomeFinal = null;
+            var typeAnnualIncome = document.getElementsByName("typeAnnualIncome");
+            // Recorremos todos los valores del radio button para encontrar el
+            // seleccionado
+            for (var i = 0; i < typeAnnualIncome.length; i++) {
+                if (typeAnnualIncome[i].checked)
+                typeAnnualIncomeFinal = typeAnnualIncome[i].value;
+            }
+      
+          actualizarDatos12('typeAnnualIncome',typeAnnualIncomeFinal)
+        }
+        function send14(){
+            var EmployerName = document.getElementById("EmployerName").value;
+            console.log(EmployerName);
+            var JobTitle = document.getElementById("JobTitle").value;
+            console.log(JobTitle);
+            actualizarDatos14('EmployerName',EmployerName)
+            actualizarDatos14('JobTitle',JobTitle)
+        }
+        function send15(){
+            var WorkingYears = document.getElementById("WorkingYears").value;
+            console.log(WorkingYears);
+            actualizarDatos15('WorkingYears',WorkingYears)
+        }
+        function send16(){
+            var WorkAddress = document.getElementById("WorkAddress").value;
+            console.log(WorkAddress);
+            var WorkCity = document.getElementById("WorkCity").value;
+            console.log(WorkCity);
+            var WorkState = document.getElementById("WorkState").value;
+            console.log(WorkState);
+            var WorkZip = document.getElementById("WorkZip").value;
+            console.log(WorkZip);
+            actualizarDatos16('WorkAddress',WorkAddress)
+            actualizarDatos16('WorkCity',WorkCity)
+            actualizarDatos16('WorkState',WorkState)
+            actualizarDatos16('WorkZip',WorkZip)
+        }
+        function send17(){
+            var SSN = document.getElementById("SSN").value;
+            console.log(SSN);
+            actualizarDatos17('SSN',SSN)
+        }
+
 
         function actualizarDatos(nombre, dato){
             var obj = {}
             if(nombre == 'howmany'){
                 obj = {
                     howmany: dato 
-                }
-            }
-            if(nombre == 'birthday'){
-                obj1 = {
-                    birthday: dato 
                 }
             }
             if(idUser != null){
@@ -1000,9 +1077,9 @@
         }
         function actualizarDatos2(nombre, dato){
             var obj2 = {}
-            if(nombre == 'birthday'){
+            if(nombre == 'howmany'){
                 obj2 = {
-                    birthday: dato 
+                    howmany: dato 
                 }
             }
             if(idUser != null){
@@ -1049,7 +1126,220 @@
             }
             
         }
+        function actualizarDatos5(nombre, dato){
+            var obj5 = {}
+            if (nombre == 'Name') {
+                obj5={
+                    Name: dato}
+            }
+            if (nombre == 'LastName') {
+                obj5={LastName: dato}
+            }
+               
+            if(idUser != null){
 
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj5, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos6(nombre, dato){
+            var obj6 = {}
+            if (nombre == 'UserStreet') {
+                obj6={UserStreet: dato}
+            }
+            if (nombre == 'UserCity') {
+                obj6={UserCity: dato}
+            }
+            if (nombre == 'UserState') {
+                obj6={UserState: dato}
+            }
+            if (nombre == 'UserZip') {
+                obj6={UserZip: dato}
+            }
+               
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj6, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos7(nombre, dato){
+            var obj7 = {}
+            if (nombre == 'mobileoptions') {
+                obj7={
+                    mobileoptions: dato}
+            }
+            if (nombre == 'PhoneNumber') {
+                obj7={PhoneNumber: dato}
+            }
+               
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj7, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos8(nombre, dato){
+            var obj8 = {}
+            if(nombre == 'UserEmail'){
+                obj8 = {
+                    UserEmail: dato 
+                }
+            }
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj8, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        // function actualizarDatos9(nombre, dato){
+        //     var obj9 = {}
+        //     if(nombre == 'Password'){
+        //         obj9 = {
+        //             Password: dato 
+        //         }
+        //     }
+        //     if(idUser != null){
+
+        //         var Ref = db.collection('usuarios').doc(idUser);
+
+        //         var setWithMerge = Ref.set(obj9, { merge: true });
+        //     }else{
+        //         alert('id user nuelo')
+        //     }
+            
+        // }
+
+        function actualizarDatos12(nombre, dato){
+            var obj12 = {}
+            if(nombre == 'Livingsituation'){
+                obj12 = {
+                    Livingsituation: LivingsituationFinal 
+                }
+            }
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj12, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos13(nombre, dato){
+            var obj13 = {}
+            if(nombre == 'typeAnnualIncome'){
+                obj13 = {
+                    typeAnnualIncome: typeAnnualIncomeFinal 
+                }
+            }
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj13, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos14(nombre, dato){
+            var obj14 = {}
+            if (nombre == 'EmployerName') {
+                obj14={
+                    EmployerName: dato}
+            }
+            if (nombre == 'JobTitle') {
+                obj14={JobTitle: dato}
+            }
+               
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj14, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos15(nombre, dato){
+            var obj15 = {}
+            if (nombre == 'WorkingYears') {
+                obj15={
+                    WorkingYears: dato}
+            }
+               
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj15, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos16(nombre, dato){
+            var obj16 = {}
+            if (nombre == 'WorkAddress') {
+                obj16={WorkAddress: dato}
+            }
+            if (nombre == 'WorkCity') {
+                obj16={WorkCity: dato}
+            }
+            if (nombre == 'WorkState') {
+                obj16={WorkState: dato}
+            }
+            if (nombre == 'WorkZip') {
+                obj16={WorkZip: dato}
+            }
+               
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj16, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        function actualizarDatos17(nombre, dato){
+            var obj17 = {}
+            if (nombre == 'SSN') {
+                obj17={
+                    SSN: dato}
+            }
+               
+            if(idUser != null){
+
+                var Ref = db.collection('usuarios').doc(idUser);
+
+                var setWithMerge = Ref.set(obj17, { merge: true });
+            }else{
+                alert('id user nuelo')
+            }
+            
+        }
+        
         // document.getELementById("botoncito").addEventListener("click", recibir())
         // function registrar(){
         //     var email = document.getElementById('email').value;
@@ -1176,7 +1466,7 @@ function saludo(){
 
 </script>
 
-<script>
+<!-- <script>
 
     var swiper = new Swiper('.swiper-container', {
 
@@ -1220,9 +1510,9 @@ cerrarmodal2.addEventListener('click', () => {
     ModalContainer.style.display = "none";
     home.classList.remove("home-sin-path");
 });
-</script>
+</script> -->
 
-<script>
+<!-- <script>
 $(document).ready(function() {
     $('form').submit(function(event) {
        event.preventDefault();
@@ -1251,7 +1541,7 @@ $(document).ready(function() {
  });
 
 
-</script>
+</script> -->
 
 <script>
     // function recibir(){
